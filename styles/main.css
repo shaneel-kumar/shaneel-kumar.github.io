@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --highlight-color: #F2A922;
+  --bg-main: #0D0D0D;
+  --bg-secondary: rgba(262626, .25);
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--highlight-color);
+  text-decoration: underline;
+}
+
+body {
+  color: white;
+  background: var(--bg-main);
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  padding: 2rem 4rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.2rem;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+header {
+
+}
+
+artcle {
+
+}
+
+article p {
+  font-family: 'Lora', serif;
+}
