@@ -55,8 +55,12 @@ header h3 {
   font-size: 3rem;
 }
 
+.timeline {
+  display: none;
+}
+
 article {
-  
+
 }
 
 article p {
