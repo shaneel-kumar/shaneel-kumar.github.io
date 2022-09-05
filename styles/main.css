@@ -62,7 +62,20 @@ header h3 {
 }
 
 .timeline {
-  display: none;
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 2rem;
+
+  background: var(--bg-main);
+  border-top: 1px solid white;
 }
 
 /* Article Preview style: */
