@@ -27,6 +27,7 @@ a:hover {
 }
 
 body {
+  position: relative;
   color: white;
   background: var(--bg-main);
   font-family: 'Playfair Display', serif;
@@ -253,8 +254,26 @@ header .timeline {
 /* -------------------- 768px screen size styling. -------------------- */
 @media only screen and (min-width: 1200px) {
 
+
+  html {
+    --faint-heading-color: #151515;
+    --faint-sub-heading-color: #333;
+    --body-padding-left-right: 20rem;
+  };
+  
   body {
-    padding: 5rem 10rem;
+    padding: 5rem var(--body-padding-left-right);
+  }
+
+  body::after {
+    content: 'Dev Academy - Hihi 2022';
+    font-size: 3rem;
+    color: var(--faint-sub-heading-color);
+
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translateX(-50%);
   }
 
   header {
@@ -270,10 +289,10 @@ header .timeline {
   }
 
   header h1 {
-    --size: 40rem;
+    --size: 35rem;
     font-size: var(--size);
-    /* line-height: var(--size); */
-    color: #151515;
+    line-height: var(--size);
+    color: var(--faint-heading-color);
   }
 
   header h3 {
@@ -311,6 +330,12 @@ header .timeline {
     bottom: 200%;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .article_previews {
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
   }
 
 }
