@@ -32,9 +32,23 @@ body {
   font-family: 'Playfair Display', serif;
   font-weight: 400;
   padding: 2rem;
+  min-width: 320px;
 }
 
-nav {
+header {
+  display: grid;
+  grid: 
+    'nav' auto
+    'blog' auto
+    'name' auto /
+    100%;
+  justify-items: center;
+  align-items: center;
+  margin: 0 0 3rem;
+}
+
+header nav {
+  grid-area: nav;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,15 +56,9 @@ nav {
   gap: 3rem;
 }
 
-header {
-  display: grid;
-  grid-template-rows: 1fr;
-  justify-items: center;
-  margin: 0 0 5rem;
-}
-
 header h1 {
   --size: 8.5rem;
+  grid-area: blog;
   font-size: var(--size);
   line-height: var(--size);
   width: 100%;
@@ -58,10 +66,11 @@ header h1 {
 }
 
 header h3 {
+  grid-area: name;
   font-size: 2rem;
 }
 
-.timeline {
+header .timeline {
   width: 100%;
   z-index: 1;
   position: fixed;
@@ -156,4 +165,44 @@ header h3 {
   font-family: 'Lora', serif;
   grid-area: description;
   font-size: 1.2rem;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 768px) {
+
+  body {
+    padding: 5rem
+  }
+  
+  header {
+    grid: 
+      'blog' auto
+      'name' auto
+      'nav' auto
+      'timeline' auto /
+      1fr;
+  }
+
+  header nav {
+    font-size: 2.2rem;
+    margin: 2rem 0;
+  }
+  
+  header h1 {
+    --size: 22rem;
+    font-size: var(--size);
+    line-height: var(--size);
+  }
+
+  header h3 {
+    font-size: 3rem;
+  }
+
+  header .timeline {
+    grid-area: timeline;
+    position:relative;
+    justify-content: space-between;
+    font-size: 2rem;
+  }
+  
 }
