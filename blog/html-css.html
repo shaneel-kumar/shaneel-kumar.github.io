@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/article.css">
+  <title>CSS Position Property</title>
+</head>
+<body>
+  <h1 class="title">CSS Position Property</h1>
+
+  <section class="article_section">
+    <p><span class="gold_text">Position</span> is a CSS property that can be used to move an HTML element, using its parent as a <span class="gold_text italic">point of reference</span>. This property has several values that you can assign it to change an element's position and a few of those values can even remove the element from within the natural flow of your HTML markup. When an element is removed from the flow, other neighbouring elements collapse in to fill the gap that remains. When removed from flow, the element hovers in its own dimension and is therefore removed from the natural relationship it used to have with it's siblings. I mention this as a word of warning as you may not always intend to remove an element from the flow of your HTML markup, in which case I would recommend using alternative CSS properties that maintain the relational behaviour. </p>
+    
+    <p>I recommend using the position property when you need to move an element relative to the <span class="gold_text">bounding box of its parent element.</span> By itself, this property <span class="gold_highlight bold">only enables</span> the selected element to move. You also require this property to be paired with other <span class="gold_text">related CSS properties</span> to define the element's new position. "Top, bottom, left and right" are the related CSS properties that declares where the element should move and you will require at least one of these related properties to achieve any form of movement. To understand how <span class="italic">position</span> and the other properties work together, first we must understand the <span class="gold_highlight bold ">relationship</span> between the child and its parent.</p>
+    <p>A child (HTML element) will first look to its parent element for a <span class="gold_text italic">point of reference</span> to position from. If it cannot find a suitable reference point (position property defined), it will look to its grandparent element and further until it finds an ancestor with a defined position property. If none are found, the child element will use the <span class="gold_text">root HTML element</span> as a point of reference which by default has a position value of relative.</p>
+    <p>Now that we understand the point of reference and the child to parent relationship, we can finally discuss how the "top, bottom, left and right" CSS properties work. These properties are <span class="gold_highlight bold">associated</span> with the corresponding borders of the point of reference and require a <span class="gold_text italic">unit of measure</span> to position an element to the associated border. For instance, if you wanted to position an element 10px away from the top border of its point of reference, you would specify “top: 10px”.</p>
+    <p>Note that <span class="gold_text">different position values</span> cause different interactions; The most common position values, their uses and any side effects are discussed using code examples below.</p>
+  </section>
+
+  <section class="article_section">
+    <h3 class="sub_heading">Relative</h3>
+    <p>The <span class="gold_text bold">"relative"</span> value is typically used on parent HTML elements to enable it to act as a <span class="italic">relative</span> point of reference. This value <span class="bold gold_highlight">DOES NOT</span> remove the parent element from the natural HTML flow so it is safe and predictable to use on parent elements.</p>
+    <img src="./assets/images/css-position/relative.jpg" alt="relative code example">
+    <p>It can also be used to position an element without removing it from flow. I've demonstrated this use case by positioning the image above in the middle of this section without having to rely on using other CSS properties. See below for the code I used.</p>
+    <img src="./assets/images/css-position/relative-live-example.jpg" alt="relative live code example">
+  </section>
+
+  <section class="article_section">
+    <h3 class="sub_heading">Absolute</h3>
+    <p>The <span class="gold_text bold">"absolute"</span> value is used to position an element relative to its <span class="gold_text bold">closest</span> point of reference. Note that this value <span class="gold_highlight bold">removes the element from flow.</span> This value is useful for positioning elements like buttons, images and small details that do not fit into the natural flow of your other elements. Note that if there is no point of reference within an element’s line of ancestors, it will use the root HTML element to assess its position. If you intend to position an element to the page (root HTML element), I recommend using the fixed position value instead (see next section).</p>
+    <img src="./assets/images/css-position/absolute-position.jpg" alt="absolute code example">
+  </section>
+
+  <section class="article_section">
+    <h3 class="sub_heading">Fixed</h3>
+    <p>The <span class="gold_text bold">"fixed"</span> value is used to position an element relative to the root HTML element (whole page). Note that this value <span class="gold_highlight bold">removes the element from flow.</span> This is useful for positioning persistent elements like navigation bars and footers that “follow you” while you scroll.</p>
+    <img src="./assets/images/css-position/fixed-position.jpg" alt="fixed code example">
+  </section>
+
+  <section class="article_section">
+    <h3 class="sub_heading">General Setup</h3>
+    <p>I would like to <span class="gold_text">emphasis</span> that the setup is usually the same. First give the parent a position value (use relative if you don’t want the parent to move) and then assign the appropriate position value to the element you intend to move. Don't forget to include at least one other associated CSS property (top, bottom, left or right) so you can see the new position on screen. Skip assigning a position value to the parent element if your intended point of reference is the root HTML element (as is the case when using fixed positioning).</p>
+  </section>
+
+  <section class="article_section">
+    <h3 class="sub_heading">Next Steps</h3>
+    <p>Have a look at my <span class="gold_highlight bold">home page</span> to see how the position property was used to create my intended design. Try <span class="gold_text italic">resizing the home screen</span> to see how the sprint navigation bar/timeline changes its position at different screen sizes and also check out the <span class="gold_text italic">gold dots</span> that appear when you hover over the timeline links (S1 - S5) at 1200px+ screen width. Feel free to dig through the CSS on my repository and as always, have a look at MDN docs and other resources online to learn more about this awesome CSS property!</p>
+  </section>
+</body>
+</html>
