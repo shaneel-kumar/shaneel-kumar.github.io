@@ -23,7 +23,7 @@ a {
 
 a:hover {
   color: var(--highlight-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 body {
@@ -144,7 +144,7 @@ header .timeline {
   cursor: pointer;
   grid-area: title;
   font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--highlight-color);
 }
 
@@ -153,14 +153,17 @@ header .timeline {
   grid-area: link;
   justify-self: center;
   align-self: center;
-  width: fit-content;
-  height: 100%;
+  width: 50%;
+  max-width: 5rem;
+  height: auto;
   background-color: var(--bg-main);
   border: none;
+  margin: 1rem 0 0;
 }
 
 .details__link_button img {
-  height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .details__date_time {
@@ -180,7 +183,7 @@ header .timeline {
 .summary__description {
   font-family: 'Lora', serif;
   grid-area: description;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: justify;
 }
 
@@ -236,9 +239,13 @@ header .timeline {
     gap: 3rem;
   }
 
+  .details__title {
+    font-size: 2rem;
+  }
+
   .summary {
     grid: 
-      'details thumbnail' 1fr
+      'details thumbnail' auto
       'description thumbnail' 1fr /
       1fr 1.5fr;
     height: var(--summary-height);
@@ -249,9 +256,14 @@ header .timeline {
   .summary__thumbnail {
     height: 100%;
   }
+
+  .summary__description {
+    margin: 5rem 0;
+    text-align: left;
+  }
 }
 
-/* -------------------- 768px screen size styling. -------------------- */
+/* -------------------- 1200px+ screen size styling. -------------------- */
 @media only screen and (min-width: 1200px) {
 
 
@@ -267,6 +279,7 @@ header .timeline {
 
   body::after {
     content: 'Dev Academy - Hihi 2022';
+    font-family: 'Roboto', serif;
     font-size: 3rem;
     color: var(--faint-sub-heading-color);
 
@@ -292,7 +305,7 @@ header .timeline {
     --size: 35rem;
     font-size: var(--size);
     line-height: var(--size);
-    color: var(--faint-heading-color);
+    color: var(--faint-sub-heading-color);
   }
 
   header h3 {
@@ -309,6 +322,7 @@ header .timeline {
 
   header .timeline:hover {
     border-color: var(--highlight-color);
+    background: rgba(0, 0, 0, 0.25);
   }
 
   header .timeline li a {
