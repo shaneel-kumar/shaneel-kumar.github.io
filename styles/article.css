@@ -117,7 +117,11 @@ p {
 }
 
 .gold_text {
-  color: var(--highlight-color)
+  color: var(--highlight-color);
+}
+
+.pink_text {
+  color: rgb(228, 72, 98);
 }
 
 .gold_highlight {
@@ -131,6 +135,20 @@ p {
 
 .underline {
   text-decoration: underline;
+}
+
+.video {
+  display: none;
+  margin: 0 auto;
+}
+
+.article_section .article_image {
+  background: white;
+  border: 5px solid gold;
+}
+
+.pad_img {
+  padding: 5px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -165,6 +183,13 @@ p {
     font-size: 2rem;
   }
   
+  .video {
+    display: block;
+  }
+
+  .pad_img {
+    padding: 20px;
+  }
   
 }
 
@@ -192,6 +217,10 @@ p {
   .nav_btn {
     font-size: 3.5rem;
     margin: 10rem 0 0;
+  }
+
+  .pad_img {
+    padding: 50px;
   }
 
 }

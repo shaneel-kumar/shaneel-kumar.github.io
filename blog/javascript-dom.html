@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/article.css">
+  <title>Javascript Fundimentals</title>
+</head>
+<body>
+  <h1 class="title">Javascript Fundimentals</h1>
+
+  <section class="article_section">
+    <h3 class="sub_heading question">An analogy to describe JavaScript and its relationship to HTML and CSS.</h3>
+    <p>Javascript is a powerful programming language used to manipulate HTML and CSS properties through the Document Object Model. The relationship between Javascript and HTML + CSS is that of a puppet master and a puppet show; We get to see the stage and all the puppets performing but what we cannot see are the strings that the master uses to manipulate everything from above. Without these strings, the puppets would lie lifeless on the stage, not moving or interacting with one another or the audience. Sure the stage is beautifully crafted and the puppets are amazing objects to look at but to create a truely dynamic experience, <span class="gold_text">we need the puppet master.</span></p>
+  </section>
+  
+  <section class="article_section">
+    <h3 class="sub_heading question">Explain control flow and loops using an example process from everyday life.</h3>
+    <p><span class="gold_text">Control flow</span> in the context of programming is the <span class="gold_text">order that instructions are executed</span>. Lines of code are just instructions telling a computer what to do and these instructions are typically read from top to bottom. A <span class="pink_highlight bold">loop</span> is a special event that occurs within the control flow which tells the computer to <span class="pink_text">repeat a set of instructions a number times</span> and then continue to the next instruction below.</p>
+    <img src="./assets/images/control-flow.png" alt="control flow" class="article_image">
+    <p>How would we instruct a computer to make us a cup of tea? First we would tell it to get a cup and tea bag from the pantry, boil some water, put tea bag in cup and pour water in. The instructions so far are one off and fit into the normal control flow (executing an instruction once and moving on). The next instruction would be to dunk the tea bag at least a few times to get the desired taste. This is an instance where we may use a for loop to instruct a computer to make several similar actions. After extracting the required flavour, the computer can move back onto the normal control flow and continue executing one off instructions (place cup on coaster and instruct me that the tea is ready).</p>
+  </section>
+  
+  <section class="article_section">
+    <h3 class="sub_heading question">Describe what the DOM is and an example of how you might interact with it.</h3>
+    <p>The <span class="gold_text">document object model</span> (DOM) is a modular representation of a webpage that uses objects to represent every HTML element associated with that page. The DOM is structured as a <span class="gold_text">family tree</span> that begins with the window and/or document object, followed by all of its children, and their children, and so on. To manipulate an object within the DOM, first you must access it through the various DOM API’s that are provided within your browser.</p>
+    <img class="article_image pad_img" src="./assets/images/dom.png" alt="DOM tree">
+    <p>Javascript is a programming language (though not the only) that is extensively used to create <span class="gold_text">DOM manipulations</span> on webpages. Accessing DOM objects is as easy as calling various methods from the <span class="gold_highlight bold">document object</span> (accessible from within Javascript) to select the particular object you want to manipulate.</p>
+    <p>Have a look at <a href="https://atelier.net/social-mobility/a-promise-broken/" class="gold_text bold">this website</a> that pushes the limits of DOM manipulation to create a story drive journey through their website. Also have a look at <a href="https://youtu.be/VuN8qwZoego" class="gold_text bold">this video</a> tutorial by WesBos which shows you how to programme a drum machine that you can play with your keyboard!</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VuN8qwZoego" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+  </section>
+  
+  <section class="article_section">
+    <h3 class="sub_heading question">Explain the difference between accessing data from arrays and objects.</h3>
+    <p><span class="gold_text">Accessing data from arrays and objects</span> comes down to how each collection stores the data inside of it. Arrays store data in a list and each item has an <span class="gold_text">associated index value</span> that allows us access to that particular item. To access an item inside an array, you simply supply the array with the correct index to retrieve the required piece of data.</p>
+    <p>Objects store data using <span class="gold_text">key/value pairs.</span> Within this pair, stored data is the value and it’s <span class="gold_highlight bold">key is how you access</span> that data. To retrieve data from an object, you simply append the key (in front) of the object variable. There are two common methods to append a key. First you can use dot notation <span class="pink_text">( object.key )</span> which is good if the key is one only word. If the key is a string with more than 1 word, you have to use the bracket notation <span class="pink_text">( object[‘key’] )</span> to retrieve the data.</p>
+  </section>
+  
+  <section class="article_section">
+    <h3 class="sub_heading question">Explain what functions are and why they are helpful.</h3>
+    <p>Functions are <span class="gold_text">reusable blocks of code</span> that you can repeat as many times as you need; It’s a good idea to put a block of code inside it’s own function if you find yourself repeating it many times within your programme. Functions can take <span class="gold_text">inputs</span> <span class="pink_text">( parameters/arguments )</span>, do some <span class="pink_highlight bold">internal magic</span> using code and finally return an <span class="gold_text">output.</span> With that being said, functions do not always require an input or output to work and can instead cause <span class="pink_text">“side effects.”</span></p>
+    <p>Functions are helpful in two ways. First, they allow you to repeat a block of code elsewhere, cutting down on the lines of code you need to create your programme. The second reason why functions are help is that they can <span class="gold_highlight bold">remove the visual noise of logic</span> and allow you to think of your programme execution at a higher level. Use descriptive function names to abstract you programme into a few lines that clearly describe what is happening within your programme without you having to worry about the <span class="gold_text">exact details</span> (line by line instructions).</p>
+  </section>
+  
+  <a href="../index.html" class="nav_btn">Home</a>
+  
+</body>
+</html>
