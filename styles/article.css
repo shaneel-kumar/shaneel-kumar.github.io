@@ -46,6 +46,13 @@ body {
   text-align: center;
 }
 
+.article_section + .title {
+  margin: 6rem 0 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--highlight-color);
+  width: 100%;
+}
+
 .sub_heading {
   font-size: 2rem;
   position: relative;
@@ -200,7 +207,7 @@ p {
   }
 
   .title {
-    margin: 0 0 10rem;
+    margin: 0 0 5rem;
     font-size: 5rem;
   }
 
