@@ -218,8 +218,17 @@ p {
 
 @media only screen and (min-width: 1200px) {
 
+  :root {
+    --max-width: 1200px;
+  }
+  
   body {
     padding: 10rem 20rem;
+  }
+
+  .article_section {
+    max-width: var(--max-width);
+    width: 100%;
   }
 
   .title {
@@ -228,13 +237,13 @@ p {
   }
 
   .sub_heading::after {
-    max-width: 1200px;
+    max-width: var(--max-width);
   }
   
   p {
     font-size: 2rem;
     margin: 5rem 0;
-    max-width: 1200px;
+    max-width: var(--max-width);
   }
 
   .nav_btn {
@@ -247,7 +256,7 @@ p {
   }
 
   .linebreak {
-    max-width: 1200px;
+    max-width: var(--max-width);
   }
 
 }
